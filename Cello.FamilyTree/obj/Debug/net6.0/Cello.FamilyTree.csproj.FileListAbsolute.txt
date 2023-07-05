@@ -1,0 +1,12 @@
+C:\projects\cello\CelloExam\CelloExam\Cello.FamilyTree\bin\Debug\net6.0\Cello.FamilyTree.deps.json
+C:\projects\cello\CelloExam\CelloExam\Cello.FamilyTree\bin\Debug\net6.0\Cello.FamilyTree.dll
+C:\projects\cello\CelloExam\CelloExam\Cello.FamilyTree\bin\Debug\net6.0\ref\Cello.FamilyTree.dll
+C:\projects\cello\CelloExam\CelloExam\Cello.FamilyTree\bin\Debug\net6.0\Cello.FamilyTree.pdb
+C:\projects\cello\CelloExam\CelloExam\Cello.FamilyTree\obj\Debug\net6.0\Cello.FamilyTree.csproj.AssemblyReference.cache
+C:\projects\cello\CelloExam\CelloExam\Cello.FamilyTree\obj\Debug\net6.0\Cello.FamilyTree.GeneratedMSBuildEditorConfig.editorconfig
+C:\projects\cello\CelloExam\CelloExam\Cello.FamilyTree\obj\Debug\net6.0\Cello.FamilyTree.AssemblyInfoInputs.cache
+C:\projects\cello\CelloExam\CelloExam\Cello.FamilyTree\obj\Debug\net6.0\Cello.FamilyTree.AssemblyInfo.cs
+C:\projects\cello\CelloExam\CelloExam\Cello.FamilyTree\obj\Debug\net6.0\Cello.FamilyTree.csproj.CoreCompileInputs.cache
+C:\projects\cello\CelloExam\CelloExam\Cello.FamilyTree\obj\Debug\net6.0\Cello.FamilyTree.dll
+C:\projects\cello\CelloExam\CelloExam\Cello.FamilyTree\obj\Debug\net6.0\ref\Cello.FamilyTree.dll
+C:\projects\cello\CelloExam\CelloExam\Cello.FamilyTree\obj\Debug\net6.0\Cello.FamilyTree.pdb

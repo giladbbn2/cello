@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script src="js/utils.js"></script>
+    <script src="js/FamilyTree.js"></script>
+</head>
+<body>
+    <h1>Family Tree UI</h1>
+    <br />
+    <br />
+
+
+    <div>
+        <button onclick="createFamilyTree()">Create Family Tree</button>
+        <button onclick="marry()">Marry</button>
+        <button onclick="haveKid()">Have Kid</button>
+        <button onclick="divorce()">Divorce</button>
+        <button onclick="show()">Show</button>
+    </div>
+    <br />
+    <br />
+    <div id="show" style="width:100%;height:750px"></div>
+
+    <script>
+
+        const createFamilyTree = async () => {
+            const motherId = prompt("Enter mother Id: ");
+
+            if (motherId === null || motherId === "") {
+                return;
+            }
+
+            const motherName = prompt("Enter mother name: ");
+
+            if (motherName === null || motherName === "") {
+                return;
+            }
+
+            const fatherId = prompt("Enter father Id: ");
+
+            if (fatherId === null || fatherId === "") {
+                return;
+            }
+
+            const fatherName = prompt("Enter father name: ");
+
+            if (fatherName === null || fatherName === "") {
+                return;
+            }
+
+            const result = await FamilyTree.CreateFamilyTree(motherId, motherName, fatherId, fatherName);
+
+            if (result) {
+                await show();
+            } else {
+                alert("ERROR");
+            }
+        };
+
+        const haveKid = async () => {
+            const motherId = prompt("Enter mother Id: ");
+
+            if (motherId === null || motherId === "") {
+                return;
+            }
+
+            const fatherId = prompt("Enter father Id: ");
+
+            if (fatherId === null || fatherId === "") {
+                return;
+            }
+
+            const kidId = prompt("Enter kid Id: ");
+
+            if (kidId === null || kidId === "") {
+                return;
+            }
+
+            const kidName = prompt("Enter kid name: ");
+
+            if (kidName === null || kidName === "") {
+                return;
+            }
+
+            let isKidMale = prompt("Enter kid gender (1 = male, 0 = female): ");
+
+            if (isKidMale === "0") {
+                isKidMale = false;
+            } else if (isKidMale === "1") {
+                isKidMale = true;
+            } else {
+                return;
+            }
+
+            const result = await FamilyTree.HaveKid(motherId, fatherId, kidId, kidName, isKidMale);
+
+            if (result) {
+                await show();
+            } else {
+                alert("ERROR");
+            }
+        };
+
+        const marry = async () => {
+            const id = prompt("Enter Id: ");
+
+            if (id === null || id === "") {
+                return;
+            }
+
+            const otherId = prompt("Enter otherId: ");
+
+            if (otherId === null || otherId === "") {
+                return;
+            }
+
+            const otherName = prompt("Enter other name: ");
+
+            if (otherName === null || otherName === "") {
+                return;
+            }
+
+            let isMale = prompt("Enter other gender (1 = male, 0 = female): ");
+
+            if (isMale === "0") {
+                isMale = false;
+            } else if (isMale === "1") {
+                isMale = true;
+            } else {
+                return;
+            }
+
+            const result = await FamilyTree.Marry(id, otherId, otherName, isMale);
+
+            if (result) {
+                await show();
+            } else {
+                alert("ERROR");
+            }
+        };
+
+        const divorce = async () => {
+            const motherId = prompt("Enter mother Id: ");
+
+            if (motherId === null || motherId === "") {
+                return;
+            }
+
+            const fatherId = prompt("Enter father Id: ");
+
+            if (fatherId === null || fatherId === "") {
+                return;
+            }
+
+            let isCustodyWithMother = prompt("Enter custody (0 = father, 1 = mother): ");
+
+            if (isCustodyWithMother === "0") {
+                isCustodyWithMother = false;
+            } else if (isCustodyWithMother === "1") {
+                isCustodyWithMother = true;
+            } else {
+                return;
+            }
+
+            const result = await FamilyTree.Divorce(motherId, fatherId, isCustodyWithMother);
+
+            if (result) {
+                await show();
+            } else {
+                alert("ERROR");
+            }
+        };
+
+        const show = async () => {
+            let result = await FamilyTree.Show();
+
+            if (result === null || result === "null") {
+                return;
+            }
+
+            result = result.replaceAll(/\n/g, "<br/>").replaceAll(/\t/g, "&emsp;&emsp;");
+
+            document.getElementById("show").innerHTML = result;
+        };
+
+    </script>
+</body>
+</html>

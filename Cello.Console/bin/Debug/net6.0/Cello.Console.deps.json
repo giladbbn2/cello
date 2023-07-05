@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Cello.Console/1.0.0": {
+        "dependencies": {
+          "Cello.FamilyTree": "1.0.0"
+        },
+        "runtime": {
+          "Cello.Console.dll": {}
+        }
+      },
+      "Cello.FamilyTree/1.0.0": {
+        "runtime": {
+          "Cello.FamilyTree.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Cello.Console/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Cello.FamilyTree/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
