@@ -27,7 +27,7 @@ family.HaveKid(0, 1, 8, "male4", Genders.Male);
 
 family.Marry(8, 10, "otherFemale1", Genders.Female);
 
-family.Marry(5, 11, "otherMale2", Genders.Male);
+family.Marry(5, 11, "otherMale3", Genders.Male);
 
 family.HaveKid(5, 11, 12, "male5", Genders.Male);
 
